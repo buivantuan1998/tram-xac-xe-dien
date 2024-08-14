@@ -7,16 +7,17 @@ import { Categories } from "./categories";
 import { Recommend } from "./recommend";
 import { ProductList } from "./product-list";
 import { Divider } from "components/divider";
-import { BodyContent } from "components/body-content";
+import { Utilities } from "components/utilities";
+import { Location } from "components/location";
 
 const HomePage: React.FunctionComponent = () => {
   return (
     <Page className="relative flex-1 flex flex-col bg-white">
-      {/* <Welcome /> */}
+      <Welcome />
       <Box className="flex-1 overflow-auto">
-        {/* <Inquiry /> */}
         <Banner />
-        <BodyContent />
+        <Utilities />
+        <Location />
         {/* <Suspense>
           <Categories />
         </Suspense>

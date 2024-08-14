@@ -6,6 +6,14 @@ import { BottomNavigation, Icon } from "zmp-ui";
 import { CartIcon } from "./cart-icon";
 
 const tabs: Record<string, MenuItem> = {
+  "/#": {
+    label: "Dịch vụ",
+    icon: <Icon icon="zi-add-user-solid" />,
+  },
+  "/#1": {
+    label: "Thanh toán",
+    icon: <Icon icon="zi-pause-solid" />,
+  },
   "/": {
     label: "Trang chủ",
     icon: <Icon icon="zi-home" />,
@@ -14,17 +22,8 @@ const tabs: Record<string, MenuItem> = {
     label: "Thông báo",
     icon: <Icon icon="zi-notif" />,
   },
-  "/cart": {
-    label: "Thanh toán",
-    icon: <Icon icon="zi-calendar" />,
-  },
-  // "/cart": {
-  //   label: "Lịch sử sạc",
-  //   icon: <CartIcon />,
-  //   activeIcon: <CartIcon active />,
-  // },
   "/profile": {
-    label: "Tài khoản",
+    label: "Tài khoản",
     icon: <Icon icon="zi-user" />,
   },
 };
