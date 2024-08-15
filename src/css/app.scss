@@ -9,6 +9,8 @@ body {
 
 .zaui-page {
   min-height: unset;
+  background-color: #051122;
+  // color: #ffffff;
 }
 
 .zaui-header {
@@ -16,6 +18,9 @@ body {
   height: auto;
   margin-bottom: 0;
   flex: none;
+
+  background-color: #051122;
+  color: #ffffff;
 
   &::after {
     display: none;
@@ -115,4 +120,25 @@ body {
       transform: scale(1.5);
     }
   }
+}
+
+.zaui-bottom-navigation-content {
+  background-color: #051122;
+  color: #ffffff;
+}
+
+.zaui-box {
+  background-color: #051122 !important;
+}
+
+#footer {
+  .zaui-bottom-navigation-item {
+    .zaui-bottom-navigation-item-label {
+      color: #ffffff;
+    }
+  }
+}
+
+.zaui-header {
+  text-align: center;
 }

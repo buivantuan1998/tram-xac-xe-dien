@@ -1,12 +1,7 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Box, Page } from "zmp-ui";
-import { Inquiry } from "./inquiry";
 import { Welcome } from "./welcome";
 import { Banner } from "./banner";
-import { Categories } from "./categories";
-import { Recommend } from "./recommend";
-import { ProductList } from "./product-list";
-import { Divider } from "components/divider";
 import { Utilities } from "components/utilities";
 import { Location } from "components/location";
 
@@ -16,16 +11,8 @@ const HomePage: React.FunctionComponent = () => {
       <Welcome />
       <Box className="flex-1 overflow-auto">
         <Banner />
-        <Utilities />
         <Location />
-        {/* <Suspense>
-          <Categories />
-        </Suspense>
-        <Divider />
-        <Recommend />
-        <Divider />
-        <ProductList />
-        <Divider /> */}
+        <Utilities />
       </Box>
     </Page>
   );

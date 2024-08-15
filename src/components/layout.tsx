@@ -5,13 +5,19 @@ import { Navigation } from "./navigation";
 import HomePage from "pages/index";
 import CategoryPage from "pages/category";
 import CartPage from "pages/cart";
-import NotificationPage from "pages/notification";
-import ProfilePage from "pages/profile";
+import NotificationPage from "pages/notification/index";
+import ProfilePage from "pages/profile/index";
 import SearchPage from "pages/search";
 import CheckoutResultPage from "pages/result";
 import { getSystemInfo } from "zmp-sdk";
 import { ScrollRestoration } from "./scroll-restoration";
 import { useHandlePayment } from "hooks";
+
+import HistoryPage from "pages/histories/index";
+import QRCodePage from "pages/qrcode/index";
+import PaymentPage from "pages/payment/index";
+import ChargingStation from "pages/charging-station/index";
+import Services from "pages/services/index";
 
 if (getSystemInfo().platform === "android") {
   const androidSafeTop = Math.round(
@@ -39,6 +45,11 @@ export const Layout: FC = () => {
           <Route path="/cart" element={<CartPage />}></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/result" element={<CheckoutResultPage />}></Route>
+          <Route path="/charging-history" element={<HistoryPage />}></Route>
+          <Route path="/qr-code" element={<QRCodePage />}></Route>
+          <Route path="/payment" element={<PaymentPage />}></Route>
+          <Route path="/charging-station" element={<ChargingStation />}></Route>
+          <Route path="/services" element={<Services />}></Route>
         </Routes>
       </Box>
       <Navigation />

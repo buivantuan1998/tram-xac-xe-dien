@@ -3,14 +3,13 @@ import React, { FC, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { MenuItem } from "types/menu";
 import { BottomNavigation, Icon } from "zmp-ui";
-import { CartIcon } from "./cart-icon";
 
 const tabs: Record<string, MenuItem> = {
-  "/#": {
+  "/services": {
     label: "Dịch vụ",
     icon: <Icon icon="zi-add-user-solid" />,
   },
-  "/#1": {
+  "/payment": {
     label: "Thanh toán",
     icon: <Icon icon="zi-pause-solid" />,
   },

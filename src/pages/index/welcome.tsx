@@ -16,20 +16,9 @@ export const Welcome: FC = () => {
       title={
         (
           <Box flex alignItems="center" className="space-x-2">
-            <img
-              className="w-8 h-8 rounded-lg border-inset"
-              src={getConfig((c) => c.template.headerLogo) || logo}
-            />
-            <Box>
-              <Text.Title size="small">{appConfig.app.title}</Text.Title>
-              {user.state === "hasValue" ? (
-                <Text size="xxSmall" className="text-gray">
-                  Welcome, {user.contents.name}!
-                </Text>
-              ) : (
-                <Text>...</Text>
-              )}
-            </Box>
+            <div className="m-[auto]">
+              Dịch Vụ
+            </div>
           </Box>
         ) as unknown as string
       }
