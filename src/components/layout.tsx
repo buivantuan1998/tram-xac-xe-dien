@@ -18,6 +18,9 @@ import QRCodePage from "pages/qrcode/index";
 import PaymentPage from "pages/payment/index";
 import ChargingStation from "pages/charging-station/index";
 import Services from "pages/services/index";
+import ChargingBattery from "pages/payment/charging-battery/index";
+import PrepaidInvoice from "pages/payment/prepaid-invoice/index";
+import PostpaidInvoice from "pages/payment/postpaid-invoice/index";
 
 if (getSystemInfo().platform === "android") {
   const androidSafeTop = Math.round(
@@ -47,9 +50,13 @@ export const Layout: FC = () => {
           <Route path="/result" element={<CheckoutResultPage />}></Route>
           <Route path="/charging-history" element={<HistoryPage />}></Route>
           <Route path="/qr-code" element={<QRCodePage />}></Route>
-          <Route path="/payment" element={<PaymentPage />}></Route>
           <Route path="/charging-station" element={<ChargingStation />}></Route>
           <Route path="/services" element={<Services />}></Route>
+
+          <Route path="/payment" element={<PaymentPage />}></Route>
+          <Route path="/payment/charging-battery" element={<ChargingBattery />}></Route>
+          <Route path="/payment/prepaid-invoice" element={<PrepaidInvoice />}></Route>
+          <Route path="/payment/postpaid-invoice" element={<PostpaidInvoice />}></Route>
         </Routes>
       </Box>
       <Navigation />

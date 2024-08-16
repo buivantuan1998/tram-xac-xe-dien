@@ -23,13 +23,13 @@ export const Utilities: FC = () => {
               <div className="text-[#fff] text-[16px] text-[600]">Tiện ích</div>
           </div>
           <div className="grid grid-cols-2 gap-4 p-4">
-              <div onClick={() => redirectHistoryPage()} className="bg-[#232933] grid justify-center pt-[25px] py-[25px] rounded-xl">
+              <div onClick={() => redirectQRPage()} className="bg-[#232933] grid justify-center pt-[25px] py-[25px] rounded-xl">
                   <img className="w-12 h-12" src={qr} />
                   <Text size="xxSmall" className="text-[#fff] font-bold mt-[5px]">
                       Quét QR
                   </Text>
               </div>
-              <div onClick={() => redirectQRPage()} className="bg-[#232933] grid justify-center py-[25px] rounded-xl">
+              <div onClick={() => redirectHistoryPage()} className="bg-[#232933] grid justify-center py-[25px] rounded-xl">
                   <img className="w-12 h-12" src={history} />
                   <Text size="xxSmall" className="text-[#fff] font-bold mt-[5px]">
                       Lịch sử sạc
