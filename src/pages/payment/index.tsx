@@ -42,7 +42,7 @@ const PaymentList: FC = () => {
 
             <div>
               <Box className="px-[15px] mt-[20px]">
-                <div className="">
+                <div className="mb-[10px]">
                     <div className="text-[#fff] text-[16px] text-[600]">Hóa đơn dịch vụ</div>
                 </div>
                 <div className="grid grid-cols-3 gap-3">

@@ -17,6 +17,7 @@ import HistoryPage from "pages/histories/index";
 import QRCodePage from "pages/qrcode/index";
 import PaymentPage from "pages/payment/index";
 import ChargingStation from "pages/charging-station/index";
+import ChargingStationDetail from "pages/charging-station/detail";
 import Services from "pages/services/index";
 import ChargingBattery from "pages/payment/charging-battery/index";
 import PrepaidInvoice from "pages/payment/prepaid-invoice/index";
@@ -50,7 +51,10 @@ export const Layout: FC = () => {
           <Route path="/result" element={<CheckoutResultPage />}></Route>
           <Route path="/charging-history" element={<HistoryPage />}></Route>
           <Route path="/qr-code" element={<QRCodePage />}></Route>
+
           <Route path="/charging-station" element={<ChargingStation />}></Route>
+          <Route path="/charging-station/detail" element={<ChargingStationDetail />}></Route>
+
           <Route path="/services" element={<Services />}></Route>
 
           <Route path="/payment" element={<PaymentPage />}></Route>

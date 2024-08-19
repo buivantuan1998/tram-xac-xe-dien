@@ -61,7 +61,7 @@ const HistoriesList: FC = () => {
 const HistoryPage: FC = () => {
   return (
     <Page>
-      <Header title="Lịch sử xạc" showBackIcon={true} />
+      <Header title="Lịch sử sạc" showBackIcon={true} />
       <div></div>
       <Divider />
       <HistoriesList />
