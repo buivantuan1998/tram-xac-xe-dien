@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import { Box, Header, Page, Text } from "zmp-ui";
+import { Box, Header, Page } from "zmp-ui";
 import { Divider } from "components/divider";
-import { TitleContent } from "components/title-content";
 
 import MotoElectrig from "static/moto-electrig.png";
 import Cusor from "static/cusor.png";
@@ -106,12 +105,9 @@ const ChargingStationDetail: FC = () => {
 };
 
 const ChargingStationDetailPage: FC = () => {
-  const titleScreen = "Chi tiết trạm sạc";
-  const urlBack = "/charging-station";
-
   return (
     <Page>
-      <TitleContent title={titleScreen} url={urlBack} />
+      <Header title="Chi tiết trạm sạc" showBackIcon={true} />
       <Divider />
       <ChargingStationDetail />
     </Page>

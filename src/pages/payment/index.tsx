@@ -52,7 +52,7 @@ const PaymentList: FC = () => {
                             Sạc pin
                         </Text>
                     </div>
-                    <div onClick={() => redirectPrepaidInvoice()} className="bg-[#232933] grid justify-center py-[25px] rounded-xl">
+                    {/* <div onClick={() => redirectPrepaidInvoice()} className="bg-[#232933] grid justify-center py-[25px] rounded-xl">
                         <img className="w-12 h-12" src={PrepaidInvoice} />
                         <Text size="xxSmall" className="text-[#fff] font-bold mt-[5px]">
                             Gói trả sau
@@ -63,7 +63,7 @@ const PaymentList: FC = () => {
                         <Text size="xxSmall" className="text-[#fff] font-bold mt-[5px]">
                             Gói trả trước
                         </Text>
-                    </div>
+                    </div> */}
                 </div>
               </Box>
             </div>
@@ -75,7 +75,7 @@ const PaymentList: FC = () => {
 const PaymentPage: FC = () => {
   return (
     <Page>
-      <Header title="Thanh toán" showBackIcon={false} />
+      <Header title="Thanh toán" showBackIcon={true} />
       <Divider />
       <PaymentList />
     </Page>

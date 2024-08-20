@@ -136,12 +136,12 @@ body {
     .zaui-bottom-navigation-item-label {
       color: #ffffff;
     }
-  }
+  } 
 }
 
-.zaui-header {
-  text-align: center;
-}
+// .zaui-header {
+//   text-align: center;
+// }
 
 
 .charging-history-grid-1285 {
@@ -152,7 +152,6 @@ body {
 .charging-station-grid-908 {
   grid-template-columns: 90% 8%;
   grid-column-gap: 5px;
-  padding: 10px;
 }
 
 .charging-station-grid-890 {
@@ -173,4 +172,31 @@ body {
 .grid-7523 {
   grid-template-columns: 75% 23%;
   grid-column-gap: 5px;
+}
+
+#postpaid-invoice-id {
+  .zaui-tabs-tabbar {
+    display: grid !important;
+    grid-template-columns: 50% 50% !important;
+    background-color: #051122 !important;
+  }
+
+  .zaui-tabs-tabbar-item-active {
+    color: #ffffff !important;
+  }
+}
+
+.grid-6533 {
+  grid-template-columns: 65% 33%;
+  grid-column-gap: 5px;
+}
+
+.zaui-btn {
+  .zaui-btn-container {
+    color: #ffffff !important;
+  }
+}
+
+.zaui-btn-icon-only .zaui-btn-icon .zaui-icon {
+  font-size: 30px;
 }

@@ -15,7 +15,7 @@ const ServicesList: FC = () => {
 const ServicesPage: FC = () => {
   return (
     <Page>
-      <Header title="Dịch vụ" showBackIcon={false} />
+      <Header title="Dịch vụ" showBackIcon={true} />
       <Divider />
       <ServicesList />
     </Page>

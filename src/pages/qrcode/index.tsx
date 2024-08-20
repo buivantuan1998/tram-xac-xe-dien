@@ -15,7 +15,7 @@ const QrCode: FC = () => {
 const QrCodePage: FC = () => {
   return (
     <Page>
-      <Header title="Quét Qr" showBackIcon={false} />
+      <Header title="Quét Qr" showBackIcon={true} />
       <Divider />
       <QrCode />
     </Page>
