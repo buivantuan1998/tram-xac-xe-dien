@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { Box, Header, Page } from "zmp-ui";
+import React, { FC, useState } from "react";
+import { Box, Header, Page, Modal, Button } from "zmp-ui";
 import { Divider } from "components/divider";
 import { useNavigate } from "react-router";
 
@@ -9,13 +9,24 @@ import Help from "static/help.png";
 import Redirect2 from "static/redirect2.png";
 import PowerRed from "static/power-red.png";
 import PowerBule from "static/power-bule.png";
+import RenewableEnergy from "static/renewable-energy.png";
 
 const ChargingStationList: FC = () => {
   const navigate = useNavigate();
+  const [dialogVisible, setDialogVisible] = useState(false);
 
   const redirectDetailPage = () => {
     navigate('/charging-station/detail');
   }
+
+  const modalContent: FC = () => {
+    return (
+      <div className="text-[#fff]">
+        <div>aaaa</div>
+        <div>bbbb</div>
+      </div>
+    );
+  };
 
   return (
     <Box className="bg-background">
@@ -51,8 +62,18 @@ const ChargingStationList: FC = () => {
               <div><img className="w-5 h-5 mt-[4px]" src={PowerBule} /></div>
               <div className="flex">
                 <div className="text-[#42B96C] mr-[10px]">Cổng sạc sẵn sàng: 47/48</div>
-                <div className="bg-[#42B96C] w-[65px] h-[20px] text-[#fff] mr-[5px] rounded-lg text-center text-[12px]">Trạng thái</div>
-                <div className="bg-[#42B96C] w-[65px] h-[20px] text-[#fff] rounded-lg text-center text-[12px]" onClick={() => redirectDetailPage()}>Dịch vụ</div>
+                <div
+                  className="bg-[#42B96C] w-[65px] h-[20px] text-[#fff] mr-[5px] rounded-lg text-center text-[12px]"
+                  onClick={() => {setDialogVisible(true)}}
+                >
+                  Trạng thái
+                </div>
+                <div
+                  className="bg-[#42B96C] w-[65px] h-[20px] text-[#fff] rounded-lg text-center text-[12px]"
+                  onClick={() => redirectDetailPage()}
+                >
+                  Dịch vụ
+                </div>
               </div>
             </div>
           </div>
@@ -83,13 +104,41 @@ const ChargingStationList: FC = () => {
               <div><img className="w-5 h-5 mt-[4px]" src={PowerRed} /></div>
               <div className="flex">
                 <div className="text-[#f10101] mr-[10px]">Ngoài giờ làm việc</div>
-                <div className="bg-[#42B96C] w-[65px] h-[20px] text-[#fff] mr-[5px] rounded-lg text-center text-[12px]">Trạng thái</div>
-                <div className="bg-[#42B96C] w-[65px] h-[20px] text-[#fff] rounded-lg text-center text-[12px]" onClick={() => redirectDetailPage()}>Dịch vụ</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <Modal
+        visible={dialogVisible}
+        title="Trạng thái sạc"
+        onClose={() => {
+          setDialogVisible(false);
+        }}
+        verticalActions
+      >
+        <Box className="bg-[#232933]">
+          <div>
+            <div className="">
+              <div className="text-[#42B96C] mb-[10px] text-[16px] text-center">Trạng thái: Đang hoạt động</div>
+            </div>
+            <div className="text-[#42B96C] mb-[10px] text-[16px] text-center">Tiến trình sạc:</div>
+            <div className="flex justify-center">
+              <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+              <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">35%</div>
+            </div>
+          </div>
+          <div className="grid justify-center">
+            <div
+             className="grid bg-[#006af5] w-[110px] h-[30px] text-center items-center rounded-xl font-bold mt-[20px]"
+             onClick={() => setDialogVisible(false)}
+            >
+              Đóng
+            </div>
+          </div>
+        </Box>
+      </Modal>
     </Box>
   );
 };
