@@ -115,23 +115,55 @@ const ChargingStationList: FC = () => {
         verticalActions
       >
         <Box className="bg-[#232933]">
-          <div>
-            {/* <div className="">
-              <div className="mb-[15px] text-[24px] text-center">Đang hoạt động</div>
-            </div> */}
-            <div className="flex justify-center mb-[15px]">
-              <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
-              <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">36%</div>
-            </div>
-            <div className="flex justify-center mb-[15px]">
-              <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
-              <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">62%</div>
-            </div>
-            <div className="flex justify-center mb-[15px]">
-              <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
-              <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">45%</div>
+          <div className="">
+            <div className="h-[100px] overflow-y-scroll">
+              <div className="grid grid-303030">
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">36%</div>
+                </div>
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">62%</div>
+                </div>
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">45%</div>
+                </div>
+              </div>
+
+              <div className="grid grid-303030">
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">36%</div>
+                </div>
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">62%</div>
+                </div>
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">45%</div>
+                </div>
+              </div>
+
+              <div className="grid grid-303030">
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">36%</div>
+                </div>
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">62%</div>
+                </div>
+                <div className="flex justify-center mb-[15px]">
+                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
+                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">45%</div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div className="grid justify-center">
             <div
              className="grid bg-[#006af5] w-[110px] h-[30px] text-center items-center rounded-xl font-bold mt-[20px]"

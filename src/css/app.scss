@@ -184,6 +184,11 @@ body {
   grid-column-gap: 5px;
 }
 
+.grid-303030 {
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 10px;
+}
+
 #postpaid-invoice-id {
   .zaui-tabs-tabbar {
     display: grid !important;
