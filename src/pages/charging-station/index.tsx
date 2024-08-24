@@ -10,7 +10,7 @@ import Redirect2 from "static/redirect2.png";
 import PowerRed from "static/power-red.png";
 import PowerBule from "static/power-bule.png";
 import RenewableEnergy from "static/renewable-energy.png";
-import ChargingStation from "static/charging-station-2.png";
+import RenewableEnergyGray from "static/renewable-energy-gray.png";
 import Wifi from "static/wi-fi.png";
 import Restrooms from "static/restrooms.png";
 import Restaurant from "static/restaurant.png";
@@ -119,8 +119,8 @@ const ChargingStationList: FC = () => {
             <div className="h-[100px] overflow-y-scroll">
               <div className="grid grid-303030">
                 <div className="flex justify-center mb-[15px]">
-                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
-                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">36%</div>
+                  <div><img className="w-9 h-9" src={RenewableEnergyGray} /></div>
+                  <div className="grid items-center text-gray ml-[15px] text-[20px]">0%</div>
                 </div>
                 <div className="flex justify-center mb-[15px]">
                   <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
@@ -138,12 +138,12 @@ const ChargingStationList: FC = () => {
                   <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">36%</div>
                 </div>
                 <div className="flex justify-center mb-[15px]">
-                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
-                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">62%</div>
+                  <div><img className="w-9 h-9" src={RenewableEnergyGray} /></div>
+                  <div className="grid items-center text-gray ml-[15px] text-[20px]">0%</div>
                 </div>
                 <div className="flex justify-center mb-[15px]">
-                  <div><img className="w-9 h-9" src={RenewableEnergy} /></div>
-                  <div className="grid items-center text-[#42B96C] ml-[15px] text-[20px]">45%</div>
+                  <div><img className="w-9 h-9" src={RenewableEnergyGray} /></div>
+                  <div className="grid items-center text-gray ml-[15px] text-[20px]">0%</div>
                 </div>
               </div>
 
@@ -185,11 +185,6 @@ const ChargingStationList: FC = () => {
       >
         <Box className="bg-[#232933]">
           <div className="px-[15px] mt-[15px]">
-            <div className="grid charging-history-grid-1285 my-[5px]">
-              <div><img className="w-7 h-7 mt-[4px]" src={ChargingStation} /></div>
-              <div className="ml-[10px] text-[16px] grid items-center">Số trụ đang trống là 2</div>
-            </div>
-
             <div className="grid charging-history-grid-1285 my-[5px]">
               <div><img className="w-7 h-7 mt-[4px]" src={Restrooms} /></div>
               <div className="ml-[10px] text-[16px] grid items-center">Có nhà vệ sinh</div>
