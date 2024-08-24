@@ -18,6 +18,8 @@ import Services from "pages/services/index";
 import ChargingBattery from "pages/payment/charging-battery/index";
 import PrepaidInvoice from "pages/payment/prepaid-invoice/index";
 import PostpaidInvoice from "pages/payment/postpaid-invoice/index";
+import Categories from "pages/qrcode/categories/index";
+import CategoriesConfirm from "pages/qrcode/categories/confirm";
 
 if (getSystemInfo().platform === "android") {
   const androidSafeTop = Math.round(
@@ -42,7 +44,7 @@ export const Layout: FC = () => {
           <Route path="/notification" element={<NotificationPage />}></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/charging-history" element={<HistoryPage />}></Route>
-          <Route path="/qr-code" element={<QRCodePage />}></Route>
+          <Route path="/qrcode" element={<QRCodePage />}></Route>
 
           <Route path="/charging-station" element={<ChargingStation />}></Route>
           <Route path="/charging-station/detail" element={<ChargingStationDetail />}></Route>
@@ -53,6 +55,9 @@ export const Layout: FC = () => {
           <Route path="/payment/charging-battery" element={<ChargingBattery />}></Route>
           <Route path="/payment/prepaid-invoice" element={<PrepaidInvoice />}></Route>
           <Route path="/payment/postpaid-invoice" element={<PostpaidInvoice />}></Route>
+
+          <Route path="/categories" element={<Categories />}></Route>
+          <Route path="/categories/:id/confirm" element={<CategoriesConfirm />}></Route>
         </Routes>
       </Box>
       <Navigation />
