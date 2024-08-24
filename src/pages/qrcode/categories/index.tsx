@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Box, Page, Text } from "zmp-ui";
+import { Box, Header, Page, Text } from "zmp-ui";
 import { Divider } from "components/divider";
 
 import { useNavigate } from "react-router";
@@ -26,12 +26,14 @@ const CategoriesList: FC = () => {
 
     return (
         <Box className="bg-background">
-            <div className="h-[80vh]">
-                <div className="bg-[#232933] text-[#fff] text-[18px] px-[25px] pt-[25px]">
-                    <div className="pb-[25px] text-center">
-                        Bạn vừa yêu cầu sử dụng trạm sạc vào lúc {currentTime} tại trạm {chargingBattery}
+            <div className="h-[73vh]">
+                <div className="px-[15px]">
+                    <div className="bg-[#232933] text-[#fff] text-[18px] px-[25px] pt-[25px] rounded-xl">
+                        <div className="pb-[25px] text-center">
+                            Bạn vừa yêu cầu sử dụng trạm sạc vào lúc {currentTime} tại trạm {chargingBattery}
+                        </div>
+                        <div className="grid justify-center pb-[10px]"><img className="w-5 h-5" src={ArrowBottom} /></div>
                     </div>
-                    <div className="grid justify-center pb-[10px]"><img className="w-5 h-5" src={ArrowBottom} /></div>
                 </div>
                 <div className="px-[15px]">
                     <div className="text-[#fff] text-[16px] mb-[15px] mt-[25px] text-center">Vui lòng chọn loại xe trước khi bắt đầu</div>
@@ -69,8 +71,9 @@ const CategoriesList: FC = () => {
 const CategoriesPage: FC = () => {
     return (
         <Page>
-        <Divider />
-        <CategoriesList />
+            <Header title="" showBackIcon={false} />
+            <Divider />
+            <CategoriesList />
         </Page>
     );
 };

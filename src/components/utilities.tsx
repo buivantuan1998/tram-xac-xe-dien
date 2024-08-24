@@ -14,7 +14,7 @@ export const Utilities: FC = () => {
     };
 
     const redirectQRPage = () => {
-        navigate('/qr-code');
+        navigate('/qrcode');
     };
 
     return (

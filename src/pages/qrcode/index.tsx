@@ -45,7 +45,6 @@ const QrCode: FC = () => {
         alignItems: 'center',
         justifyContent: 'center',
         height: '80vh',
-        backgroundColor: '#f7f7f7',
     }
 
     const toggleTorch = () => {
@@ -56,33 +55,41 @@ const QrCode: FC = () => {
     return (
         <Box className="bg-background">
             <div className="flex-col" style={data}>
-                <div className="mb-[20px]">Quét mã QR Code để kích hoạt bộ sạc</div>
+                <div className="mb-[20px] text-[#fff]">Quét mã QR Code để kích hoạt bộ sạc</div>
                 <QrScanner
+                    ref={scannerRef}
                     delay={300}
                     style={previewStyle}
                     onError={handleError}
                     onScan={handleScan}
                     constraints={{ video: videoConstraints }}
                 />
-                <div className="mt-[20px]">Căn cho QR vào giữa ô vuông</div>
+                <div className="mt-[20px] text-[#fff]">Căn cho QR vào giữa ô vuông</div>
                 <div onClick={toggleTorch}>
-                <img className="w-7 h-7 mt-[10px]" src={isTorchOn ? EnergyOn : EnergyOff} />
+                    <img className="w-7 h-7 mt-[10px]" src={isTorchOn ? EnergyOn : EnergyOff} />
                 </div>
-
-                <p>Kết quả: {result}</p>
             </div>
         </Box>
     );
 };
 
 const QrCodePage: FC = () => {
-  return (
-    <Page>
-      <Header title="Quét mã QR Code" showBackIcon={true} />
-      <Divider />
-      <QrCode />
-    </Page>
-  );
+    const navigate = useNavigate();
+    const backHomePage = () => {
+        navigate("/");
+    };
+
+    return (
+        <Page>
+        <Header
+            title="Quét mã QR Code"
+            showBackIcon={true}
+            onBackClick={() => backHomePage()}
+        />
+        <Divider />
+        <QrCode />
+        </Page>
+    );
 };
 
 export default QrCodePage;
