@@ -20,6 +20,7 @@ import PrepaidInvoice from "pages/payment/prepaid-invoice/index";
 import PostpaidInvoice from "pages/payment/postpaid-invoice/index";
 import Categories from "pages/qrcode/categories/index";
 import CategoriesConfirm from "pages/qrcode/categories/confirm";
+import InfoCharging from "pages/qrcode/categories/info-charging";
 
 if (getSystemInfo().platform === "android") {
   const androidSafeTop = Math.round(
@@ -58,6 +59,7 @@ export const Layout: FC = () => {
 
           <Route path="/categories" element={<Categories />}></Route>
           <Route path="/categories/:id/confirm" element={<CategoriesConfirm />}></Route>
+          <Route path="/categories/info-charging" element={<InfoCharging />}></Route>
         </Routes>
       </Box>
       <Navigation />

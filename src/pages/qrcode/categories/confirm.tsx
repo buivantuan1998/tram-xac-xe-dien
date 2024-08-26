@@ -6,8 +6,8 @@ import { useNavigate } from "react-router";
 import { useParams } from 'react-router-dom';
 import { format } from "date-fns";
 
-import ConfirmEvo200 from "static/confirm-evo200.png";
-import ConfirmFelizS from "static/confirm-felizs.png";
+import ConfirmEvo200 from "static/confirm-evo200-1.png";
+import ConfirmFelizS from "static/confirm-evo200-1.png";
 import ArrowBottom from "static/arrow-bottom.png";
 
 const CategoriesConfirm: FC = () => {
@@ -30,7 +30,7 @@ const CategoriesConfirm: FC = () => {
     };
 
     const AgreeAction = () => {
-        navigate(`/`)
+        navigate(`/categories/info-charging`)
     };
 
     return (
