@@ -5,7 +5,7 @@ import { MenuItem } from "types/menu";
 import { BottomNavigation, Icon } from "zmp-ui";
 
 const tabs: Record<string, MenuItem> = {
-  "/services": {
+  "/": {
     label: "Dịch vụ",
     icon: <Icon icon="zi-add-user-solid" />,
   },
@@ -13,8 +13,8 @@ const tabs: Record<string, MenuItem> = {
     label: "Thanh toán",
     icon: <Icon icon="zi-pause-solid" />,
   },
-  "/": {
-    label: "Trang chủ",
+  "/home": {
+    label: "Trang chủ",
     icon: <Icon icon="zi-home" />,
   },
   "/notification": {
@@ -58,7 +58,7 @@ export const Navigation: FC = () => {
           label={tabs[path].label}
           icon={tabs[path].icon}
           activeIcon={tabs[path].activeIcon}
-          onClick={() => navigate(path)}
+          onClick={() => tabs[path].label != 'Trang chủ' ? navigate(path) : null}
         />
       ))}
     </BottomNavigation>

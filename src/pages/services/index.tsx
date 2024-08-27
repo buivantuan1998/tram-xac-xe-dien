@@ -1,23 +1,19 @@
 import React, { FC } from "react";
-import { Box, Header, Page, Text } from "zmp-ui";
-import { Divider } from "components/divider";
-
-const ServicesList: FC = () => {
-  return (
-    <Box className="bg-background px-[15px]">
-        <div>
-            <h1 className="text-[#fff]">This is page services</h1>
-        </div>
-    </Box>
-  );
-};
+import { Box, Page } from "zmp-ui";
+import { Welcome } from "../../pages/index/welcome";
+import { Banner } from "../../pages/index/banner";
+import { Utilities } from "components/utilities";
+import { Location } from "components/location";
 
 const ServicesPage: FC = () => {
   return (
-    <Page>
-      <Header title="Dịch vụ" showBackIcon={true} />
-      <Divider />
-      <ServicesList />
+    <Page className="relative flex-1 flex flex-col bg-white">
+      <Welcome />
+      <Box className="flex-1 overflow-auto">
+        <Banner />
+        <Location />
+        <Utilities />
+      </Box>
     </Page>
   );
 };

@@ -6,8 +6,8 @@ import { useNavigate } from "react-router";
 import { useParams } from 'react-router-dom';
 import { format } from "date-fns";
 
-import ConfirmEvo200 from "static/confirm-evo200-1.png";
-import ConfirmFelizS from "static/confirm-evo200-1.png";
+import ConfirmEvo200 from "static/evo200-02.png";
+import ConfirmFelizS from "static/felizs-02.png";
 import ArrowBottom from "static/arrow-bottom.png";
 
 const CategoriesConfirm: FC = () => {
@@ -47,7 +47,7 @@ const CategoriesConfirm: FC = () => {
                 <div className="px-[15px]">
                     <div className="text-[#fff] text-[16px] mb-[15px] mt-[25px] text-center">Chọn loại xe sạc thành công</div>
                     <div>
-                        <img className="w-15 h-15" src={ id == "1" ? ConfirmEvo200 : ConfirmFelizS} />
+                        <img className="w-15 h-15 w-[100%]" src={ id == "1" ? ConfirmEvo200 : ConfirmFelizS} />
                     </div>
                 </div>
                 <div></div>

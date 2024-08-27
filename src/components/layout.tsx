@@ -41,7 +41,7 @@ export const Layout: FC = () => {
       <ScrollRestoration />
       <Box className="flex-1 flex flex-col overflow-hidden">
         <Routes>
-          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/home" element={<HomePage />}></Route>
           <Route path="/notification" element={<NotificationPage />}></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/charging-history" element={<HistoryPage />}></Route>
@@ -50,7 +50,7 @@ export const Layout: FC = () => {
           <Route path="/charging-station" element={<ChargingStation />}></Route>
           <Route path="/charging-station/detail" element={<ChargingStationDetail />}></Route>
 
-          <Route path="/services" element={<Services />}></Route>
+          <Route path="/" element={<Services />}></Route>
 
           <Route path="/payment" element={<PaymentPage />}></Route>
           <Route path="/payment/charging-battery" element={<ChargingBattery />}></Route>
