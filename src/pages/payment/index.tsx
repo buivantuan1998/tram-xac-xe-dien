@@ -5,6 +5,8 @@ import charging from "static/charging-station-1.png";
 import PrepaidInvoice from "static/bill.png";
 import PostpaidInvoice from "static/postpaid-invoice.png";
 
+import ChargingBattery from "../payment/charging-battery/index";
+
 import { useNavigate } from "react-router";
 
 const PaymentList: FC = () => {
@@ -29,7 +31,7 @@ const PaymentList: FC = () => {
   return (
     <Box className="bg-background">
         <div>
-            <div className="h-[260px] bg-[#232933]">
+            {/* <div className="h-[260px] bg-[#232933]">
               <div className="h-[25px]"></div>
               <div className="h-[150px] bg-[#4e596a] rounded-xl m-[auto]" style={styleWidth}>
                 <div className="h-[50px]"></div>
@@ -38,7 +40,7 @@ const PaymentList: FC = () => {
                 </div>
               </div>
               <div className="text-[#fff] ml-[20px] mt-[40px]">Thẻ ATM</div>
-            </div>
+            </div> */}
 
             <div>
               <Box className="px-[15px] mt-[20px]">
@@ -77,7 +79,7 @@ const PaymentPage: FC = () => {
     <Page>
       <Header title="Thanh toán" showBackIcon={true} />
       <Divider />
-      <PaymentList />
+      <ChargingBattery />
     </Page>
   );
 };

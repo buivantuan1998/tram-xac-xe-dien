@@ -114,7 +114,7 @@ const ChargingBattery: FC = () => {
 const ChargingBatteryPage: FC = () => {
   return (
     <Page>
-      <Header title="Hóa đơn sạc pin" showBackIcon={true} />
+      {/* <Header title="Hóa đơn sạc pin" showBackIcon={true} /> */}
       <Divider />
       <ChargingBattery />
     </Page>
