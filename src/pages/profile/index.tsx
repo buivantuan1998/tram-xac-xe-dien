@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import { Box, Header, Page } from "zmp-ui";
 
+import { useNavigate } from "react-router";
+
 import User from "static/user.png";
 import Logout from "static/logout.png";
 import Discount from "static/discount.png";
@@ -11,8 +13,14 @@ import Headphones from "static/headphones.png";
 import Policy from "static/policy.png";
 
 const Personal: FC = () => {
+  const navigate = useNavigate();
+
   const borderBottom = {
     borderBottom: "1px solid #808080",
+  };
+
+  const redirectTermsPage = () => {
+    navigate(`/terms`);
   };
 
   return(
@@ -23,7 +31,7 @@ const Personal: FC = () => {
             <img className="w-12 h-12" src={User} />
           </div>
           <div>
-            <div className="font-bold text-[16px]">Bùi Văn Tuấn</div>
+            <div className="font-bold text-[16px]">Nguyễn Châu Khôi</div>
             <div className="text-[16px] text-gray">0332-0226-335</div>
             <div className="text-[16px] text-gray">Hoạt động từ: 01/01/2024</div>
           </div>
@@ -66,7 +74,7 @@ const Personal: FC = () => {
             <div className="" style={borderBottom}></div>
           </div>
 
-          <div className="mb-[5px]">
+          <div className="mb-[5px]" onClick={() => redirectTermsPage()}>
             <div className="grid grid-8836 mb-[20px]">
               <div><img className="w-6 h-6" src={Policy} /></div>
               <div>Điều khoản sử dụng</div>

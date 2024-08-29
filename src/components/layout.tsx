@@ -2,9 +2,6 @@ import React, { FC } from "react";
 import { Route, Routes } from "react-router";
 import { Box } from "zmp-ui";
 import { Navigation } from "./navigation";
-import HomePage from "pages/index";
-import NotificationPage from "pages/notification/index";
-import ProfilePage from "pages/profile/index";
 import { getSystemInfo } from "zmp-sdk";
 import { ScrollRestoration } from "./scroll-restoration";
 import { useHandlePayment } from "hooks";
@@ -21,6 +18,10 @@ import PostpaidInvoice from "pages/payment/postpaid-invoice/index";
 import Categories from "pages/qrcode/categories/index";
 import CategoriesConfirm from "pages/qrcode/categories/confirm";
 import InfoCharging from "pages/qrcode/categories/info-charging";
+import HomePage from "pages/index";
+import NotificationPage from "pages/notification/index";
+import ProfilePage from "pages/profile/index";
+import TermsPage from "pages/profile/terms";
 
 if (getSystemInfo().platform === "android") {
   const androidSafeTop = Math.round(
@@ -43,7 +44,10 @@ export const Layout: FC = () => {
         <Routes>
           <Route path="/home" element={<HomePage />}></Route>
           <Route path="/notification" element={<NotificationPage />}></Route>
+
           <Route path="/profile" element={<ProfilePage />}></Route>
+          <Route path="/terms" element={<TermsPage />}></Route>
+
           <Route path="/charging-history" element={<HistoryPage />}></Route>
           <Route path="/qrcode" element={<QRCodePage />}></Route>
 

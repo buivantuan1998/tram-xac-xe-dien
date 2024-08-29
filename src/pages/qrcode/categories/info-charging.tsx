@@ -10,6 +10,7 @@ import RenewableEnergy from "static/renewable-energy-1.png";
 import Thermometer from "static/thermometer.png";
 import Electricity from "static/electricity.png";
 import Voltage from "static/voltage.png";
+import BatteryHeart from "static/battery-heart.png";
 
 const ChargingInfoList: FC = () => {
     const navigate = useNavigate();
@@ -86,21 +87,21 @@ const ChargingInfoList: FC = () => {
 
             <div className="px-[15px]">
                 <div className="bg-[#232933] rounded-xl p-[10px]">
-                    <div className="text-center" style={borderBottom}>
+                    {/* <div className="text-center" style={borderBottom}>
                         <div className="text-gray text-[16px]">Sức khỏe pin</div>
                         <div className="text-[20px] pb-[6px] font-bold">100%</div>
-                    </div>
+                    </div> */}
                     <div className="grid grid-47247 py-[10px]" style={borderBottom}>
                         <div className="grid grid-5640">
                             <div>
-                                <div className="text-gray text-[16px] pb-[5px]">Nhiệt độ</div>
+                                <div className="text-gray text-[16px] pb-[5px]">Sức khỏe pin</div>
                                 <div className="flex justify-center">
-                                    <div className="text-[22px] font-bold">28</div>
-                                    <div className="text-[14px] font-bold grid items-end">°C</div>
+                                    <div className="text-[22px] font-bold">100</div>
+                                    <div className="text-[14px] font-bold grid items-end">%</div>
                                 </div>
                             </div>
                             <div className="grid items-center justify-center">
-                                <img className="w-10 h-10" src={Thermometer} />
+                                <img className="w-10 h-10" src={BatteryHeart} />
                             </div>
                         </div>
                         <div style={borderLeft}></div>
@@ -117,6 +118,35 @@ const ChargingInfoList: FC = () => {
                                 <img className="w-10 h-10" src={RenewableEnergy} />
                             </div>
                         </div>
+                        </div>
+                    </div>
+                    <div className="grid grid-47247 py-[10px]" style={borderBottom}>
+                        <div className="grid grid-5640">
+                            <div>
+                                <div className="text-gray text-[16px] pb-[5px]">Nhiệt độ pin</div>
+                                <div className="flex justify-center">
+                                    <div className="text-[22px] font-bold">35</div>
+                                    <div className="text-[14px] font-bold grid items-end">°C</div>
+                                </div>
+                            </div>
+                            <div className="grid items-center justify-center">
+                                <img className="w-10 h-10" src={Thermometer} />
+                            </div>
+                        </div>
+                        <div style={borderLeft}></div>
+                        <div>
+                            <div className="grid grid-5640">
+                                <div>
+                                    <div className="text-gray text-[16px] pb-[5px]">Nhiệt độ BMS</div>
+                                    <div className="flex justify-center">
+                                        <div className="text-[22px] font-bold">19</div>
+                                        <div className="text-[14px] font-bold grid items-end">°C</div>
+                                    </div>
+                                </div>
+                                <div className="grid items-center justify-center">
+                                    <img className="w-10 h-10" src={Thermometer} />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="grid grid-47247 py-[10px]">

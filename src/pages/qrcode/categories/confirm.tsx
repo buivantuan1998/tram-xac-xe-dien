@@ -6,8 +6,8 @@ import { useNavigate } from "react-router";
 import { useParams } from 'react-router-dom';
 import { format } from "date-fns";
 
-import ConfirmEvo200 from "static/evo200-02.png";
-import ConfirmFelizS from "static/felizs-02.png";
+import ConfirmEvo200 from "static/moto-charging.png";
+import ConfirmFelizS from "static/moto-charging.png";
 import ArrowBottom from "static/arrow-bottom.png";
 
 const CategoriesConfirm: FC = () => {
