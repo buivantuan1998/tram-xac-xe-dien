@@ -47,7 +47,7 @@ const CategoriesConfirm: FC = () => {
                 <div className="px-[15px]">
                     <div className="text-[#fff] text-[16px] mb-[15px] mt-[25px] text-center">Chọn loại xe sạc thành công</div>
                     <div>
-                        <img className="w-15 h-15 w-[100%]" src={ id == "1" ? ConfirmEvo200 : ConfirmFelizS} />
+                        <img className="w-15 h-15 w-[100%]" src={id == "1" ? ConfirmEvo200 : ConfirmFelizS} />
                     </div>
                 </div>
                 <div></div>
@@ -74,13 +74,13 @@ const CategoriesConfirm: FC = () => {
 };
 
 const CategoriesConfirmPage: FC = () => {
-  return (
-    <Page>
-        <Header title="" showBackIcon={false} />
-        <Divider />
-        <CategoriesConfirm />
-    </Page>
-  );
+    return (
+        <Page>
+            <Header title="" showBackIcon={false} />
+            <Divider />
+            <CategoriesConfirm />
+        </Page>
+    );
 };
 
 export default CategoriesConfirmPage;

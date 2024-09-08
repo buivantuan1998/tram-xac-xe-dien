@@ -22,11 +22,15 @@ import HomePage from "pages/index";
 import NotificationPage from "pages/notification/index";
 import ProfilePage from "pages/profile/index";
 import TermsPage from "pages/profile/terms";
+import FaqPage from "pages/profile/faq";
+import CenterHelpPage from "pages/profile/center-help";
+import RequestSupportPage from "pages/profile/request-support";
+import PromotionPage from "pages/profile/promotion";
 
 if (getSystemInfo().platform === "android") {
   const androidSafeTop = Math.round(
     (window as any).ZaloJavaScriptInterface.getStatusBarHeight() /
-      window.devicePixelRatio,
+    window.devicePixelRatio,
   );
   document.body.style.setProperty(
     "--zaui-safe-area-inset-top",
@@ -47,6 +51,10 @@ export const Layout: FC = () => {
 
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/terms" element={<TermsPage />}></Route>
+          <Route path="/faq" element={<FaqPage />}></Route>
+          <Route path="/center-help" element={<CenterHelpPage />}></Route>
+          <Route path="/request-support" element={<RequestSupportPage />}></Route>
+          <Route path="/promotion" element={<PromotionPage />}></Route>
 
           <Route path="/charging-history" element={<HistoryPage />}></Route>
           <Route path="/qrcode" element={<QRCodePage />}></Route>

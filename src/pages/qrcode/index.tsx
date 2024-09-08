@@ -9,7 +9,7 @@ import EnergyOn from "static/energy-on.png";
 import EnergyOff from "static/energy-off.png";
 
 declare var ImageCapture: {
-  new(videoTrack: MediaStreamTrack): any;
+    new(videoTrack: MediaStreamTrack): any;
 };
 
 const QrCode: FC = () => {
@@ -81,13 +81,13 @@ const QrCodePage: FC = () => {
 
     return (
         <Page>
-        <Header
-            title="Quét mã QR Code"
-            showBackIcon={true}
-            onBackClick={() => backHomePage()}
-        />
-        <Divider />
-        <QrCode />
+            <Header
+                title="Quét mã QR Code"
+                showBackIcon={true}
+                onBackClick={() => backHomePage()}
+            />
+            <Divider />
+            <QrCode />
         </Page>
     );
 };
